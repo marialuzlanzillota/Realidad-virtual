@@ -5,8 +5,13 @@ using UnityEngine;
 public class esferasadestruir : MonoBehaviour
 {
     public GameObject ObjPuntos;
+    public AudioSource Agarraesferas;
+    public AudioSource brillo;
 
-
+    private void Start()
+    {
+        brillo.Play();
+    }
     private void OnTriggerEnter(Collider other)
     {
         
@@ -14,7 +19,8 @@ public class esferasadestruir : MonoBehaviour
             Debug.Log("La pelota se destruye :)");
             Destroy(gameObject);
             Debug.Log("Si la pelota se destruye yo me sumo");
-
+            Agarraesferas.Play();
+            brillo.Stop();
 
     } 
 }
