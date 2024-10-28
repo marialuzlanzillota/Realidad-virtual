@@ -6,6 +6,7 @@ using UnityEngine;
 public class ControlPuntosPuerta : MonoBehaviour
 {
     public Animator doorAnim2;
+    public Animator panel;
     public Puntos puntosScript;      
     public puerta1 puertaScript;
     public TextMeshProUGUI texto;
@@ -16,35 +17,43 @@ public class ControlPuntosPuerta : MonoBehaviour
         puertaScript.enabled = false;
         Debug.Log("Te faltan esferas");
     }
-    private void Update()
+
+    private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Trigger activation");
+        if(other.gameObject.CompareTag("Player"))
+        {
+            if (puertaAbierta || CheckForDoorOpen())
+            {
+                doorAnim2.Play("open1");
+            }
+            else if (!CheckForDoorOpen())
+            {
+
+                StartCoroutine(OpenAndCloseDoor());
+            }
+        }
+    }
+
+    bool CheckForDoorOpen()
+    {
+        Debug.Log("CheckForDoorOpen");
         if (puntosScript.puntos >= 6 && !puertaAbierta)
         {
             puertaScript.enabled = true;
             puertaAbierta = true;
             Debug.Log("¡Puntos suficientes! Ahora puedes abrir la puerta.");
+            return true;
         }
-        
-     
+        return false;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private IEnumerator OpenAndCloseDoor()
     {
-        if (other.gameObject.CompareTag("Player") && puertaAbierta)
-        {
-            doorAnim2.Play("open1");
-        }
-        //else
-        //{
-        //    StartCoroutine(OpenAndCloseDoor());
-        //}
+        Debug.Log("Coroutine");
+        panel.Play("open");
+        yield return new WaitForSeconds(5);
+        panel.Play("close");
     }
-
-    //private IEnumerator OpenAndCloseDoor()
-    //{
-    //    doorAnim2.Play("open");
-    //    yield return new WaitForSeconds(5);
-    //    doorAnim2.Play("close");
-    //}
 }
 

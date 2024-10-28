@@ -11,7 +11,7 @@ public class Puntos : MonoBehaviour
 
     private void Update()
     {
-        textoPuntos.text = puntos+ "/6";
+        textoPuntos.text = puntos + "/6";
 
     }
 }
