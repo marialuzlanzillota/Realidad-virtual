@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class opciones : MonoBehaviour
 {
-    public ControladorOpciones panelOpciones;
-
-    void Start()
-    {
-        panelOpciones = GameObject.FindWithTag("opciones").GetComponent<ControladorOpciones>();
-    }
+    public GameObject pantallaOpciones;
 
     // Update is called once per frame
     void Update()
@@ -22,6 +17,7 @@ public class opciones : MonoBehaviour
 
     public void MostrarOpciones()
     {
-        panelOpciones.pantallaOpciones.SetActive(true);
+        if (pantallaOpciones == null) pantallaOpciones = FindObjectOfType<brillo>().optionsPanel;
+        if (pantallaOpciones != null) pantallaOpciones.SetActive(true);
     }
 }

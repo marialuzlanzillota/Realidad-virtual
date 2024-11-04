@@ -8,6 +8,7 @@ public class brillo : MonoBehaviour
     public Slider slider;
     public float slidersValue;
     public Image panelBrillo;
+    public GameObject optionsPanel;
     void Start()
     {
         slider.value = PlayerPrefs.GetFloat("brillo",0.5f);
