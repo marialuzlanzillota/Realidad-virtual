@@ -70,3 +70,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Resources/Prefabs/Tutorials/Boss Tutorials/General/Cada 5 segundos se renueva un ciclo de escupitajos. Cada ciclo trae 1 escupitajo más que el anterior ciclo (10 escupitajos máximo).asset
+Assets/Resources/Prefabs/Tutorials/Boss Tutorials/General/Cada 5 segundos se renueva un ciclo de escupitajos. Cada ciclo trae 1 escupitajo más que el anterior ciclo (10 escupitajos máximo).asset.meta
+Assets/Resources/Prefabs/Tutorials/Boss Tutorials/General/2 tipos de relojes. Deja caer los relojes celestes y sumaras tiempo de combate, destruye los rojos o se restara tiempo de combate..asset.meta
+Assets/Resources/Prefabs/Tutorials/Boss Tutorials/General/2 tipos de relojes. Deja caer los relojes celestes y sumaras tiempo de combate, destruye los rojos o se restara tiempo de combate..asset

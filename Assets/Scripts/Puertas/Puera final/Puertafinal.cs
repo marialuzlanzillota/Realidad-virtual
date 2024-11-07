@@ -6,7 +6,7 @@ using UnityEngine;
 public class ControlPuntosPuerta : MonoBehaviour
 {
     public Animator doorAnim2;
-    public Animator panel;
+    public Animator image;
     public Puntos puntosScript;      
     public puerta1 puertaScript;
     public TextMeshProUGUI texto;
@@ -51,9 +51,9 @@ public class ControlPuntosPuerta : MonoBehaviour
     private IEnumerator OpenAndCloseDoor()
     {
         Debug.Log("Coroutine");
-        panel.Play("open");
+        image.Play("open");
         yield return new WaitForSeconds(3);
-        panel.Play("close");
+        image.Play("close");
     }
 }
 
