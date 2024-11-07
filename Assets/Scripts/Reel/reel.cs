@@ -9,11 +9,13 @@ public class reel : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-
-                SceneManager.LoadScene(2);
-                Debug.Log("Cambio de escena");
-            
+            StartCoroutine(CargarEscenaConRetraso());
         }
     }
-    
+    private IEnumerator CargarEscenaConRetraso()
+    {
+        yield return new WaitForSeconds(2); 
+        SceneManager.LoadScene(2); 
+    }
+
 }
