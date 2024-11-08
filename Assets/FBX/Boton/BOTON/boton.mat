@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5884083756212988988
+--- !u!114 &-5223920292688579280
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: esfera_azul
+  m_Name: boton
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -32,7 +32,7 @@ Material:
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap:
     RenderType: Opaque
   disabledShaderPasses: []
@@ -41,11 +41,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 398647ba34163884892a7c10912770ee, type: 3}
+        m_Texture: {fileID: 2800000, guid: 20c677ee255dcd2478c06ece3cd02b81, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: d6e31c0be4064ae479ebdf10c2dc0382, type: 3}
+        m_Texture: {fileID: 2800000, guid: abb9b056f7b95dd429b77f2b30aecb9a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -61,15 +61,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 48f309d7a8e2e724f926bd53b262be67, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 398647ba34163884892a7c10912770ee, type: 3}
+        m_Texture: {fileID: 2800000, guid: 20c677ee255dcd2478c06ece3cd02b81, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: a6fd322b4ed11484fb3283566e852e1d, type: 3}
+        m_Texture: {fileID: 2800000, guid: a9054649e3e85d848a3664f2b4fde9f6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -129,8 +129,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0, g: 0.28342748, b: 1, a: 1}
-    - _Color: {r: 0, g: 0.28342745, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0.0722139, b: 1.4980392, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0.27568763, g: 1.6816945, b: 0.32623038, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

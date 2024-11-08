@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class click : MonoBehaviour
 {
     public Animator Esfera;
+    public AudioSource boton;
     private void OnMouseDown()
     {
         Esfera.Play("abajo");
+        boton.Play();
         StartCoroutine(CargarEscenaConRetraso());
         Debug.Log("Click");
     }
