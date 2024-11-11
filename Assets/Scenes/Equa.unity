@@ -8744,7 +8744,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1004004659}
-  - component: {fileID: 1004004657}
   - component: {fileID: 1004004660}
   m_Layer: 0
   m_Name: Puerta 3
@@ -8753,21 +8752,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1004004657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1004004656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad588900f8d46564881c99d2798e8739, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorAnim: {fileID: 0}
-  puertaabre: {fileID: 1913903523}
-  puertacierra: {fileID: 1626440438}
 --- !u!4 &1004004659
 Transform:
   m_ObjectHideFlags: 0
@@ -10744,8 +10728,9 @@ MonoBehaviour:
   doorAnim2: {fileID: 1004004660}
   image: {fileID: 1660311578}
   puntosScript: {fileID: 276005394}
-  puertaScript: {fileID: 1004004657}
   texto: {fileID: 0}
+  puertaabre: {fileID: 1913903523}
+  puertacierra: {fileID: 1626440438}
 --- !u!1 &1419214063
 GameObject:
   m_ObjectHideFlags: 0
@@ -13104,8 +13089,9 @@ MonoBehaviour:
   doorAnim2: {fileID: 0}
   image: {fileID: 1660311578}
   puntosScript: {fileID: 276005394}
-  puertaScript: {fileID: 0}
   texto: {fileID: 0}
+  puertaabre: {fileID: 0}
+  puertacierra: {fileID: 0}
 --- !u!1001 &1669724459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14708,6 +14694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cartelAnim: {fileID: 1894610114}
+  player: {fileID: 0}
 --- !u!65 &1900958042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17121,7 +17108,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450652902965299}
-  - component: {fileID: 919132148912102026}
   m_Layer: 0
   m_Name: PuertaPRINCIPAL
   m_TagString: Untagged
@@ -17129,21 +17115,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &919132148912102026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148912102025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad588900f8d46564881c99d2798e8739, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorAnim: {fileID: 0}
-  puertaabre: {fileID: 1913903523}
-  puertacierra: {fileID: 1626440438}
 --- !u!23 &1034774751560266152
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17240,7 +17211,6 @@ GameObject:
   - component: {fileID: 3461396488472238369}
   - component: {fileID: 1034774751560266152}
   - component: {fileID: 3461396488472238370}
-  - component: {fileID: 3461396488472238371}
   m_Layer: 0
   m_Name: puerta principal
   m_TagString: Untagged
@@ -17293,21 +17263,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8302998239941273875, guid: 80f3f773059bdfd40a4fe397c3785c3e, type: 3}
---- !u!114 &3461396488472238371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2299252269944170020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad588900f8d46564881c99d2798e8739, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorAnim: {fileID: 0}
-  puertaabre: {fileID: 1913903523}
-  puertacierra: {fileID: 1626440438}
 --- !u!4 &4149191920862985090
 Transform:
   m_ObjectHideFlags: 0
@@ -17335,7 +17290,6 @@ GameObject:
   - component: {fileID: 214842771687486486}
   - component: {fileID: 1954309143559972861}
   - component: {fileID: 8215903235558366458}
-  - component: {fileID: 8215903235558366459}
   m_Layer: 0
   m_Name: puerta principal 2
   m_TagString: Untagged
@@ -17365,21 +17319,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8931099397214336736, guid: 80f3f773059bdfd40a4fe397c3785c3e, type: 3}
---- !u!114 &8215903235558366459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8215903235558366457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad588900f8d46564881c99d2798e8739, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorAnim: {fileID: 0}
-  puertaabre: {fileID: 1913903523}
-  puertacierra: {fileID: 1626440438}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
