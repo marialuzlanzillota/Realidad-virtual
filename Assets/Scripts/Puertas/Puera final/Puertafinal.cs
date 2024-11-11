@@ -8,15 +8,11 @@ public class ControlPuntosPuerta : MonoBehaviour
     public Animator doorAnim2;
     public Animator image;
     public Puntos puntosScript;      
-    public puerta1 puertaScript;
     public TextMeshProUGUI texto;
+    public AudioSource puertaabre;
+    public AudioSource puertacierra;
 
     private bool puertaAbierta = false;
-    private void Start()
-    {
-        puertaScript.enabled = false;
-        Debug.Log("Te faltan esferas");
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -40,7 +36,6 @@ public class ControlPuntosPuerta : MonoBehaviour
         Debug.Log("CheckForDoorOpen");
         if (puntosScript.puntos >= 6 && !puertaAbierta)
         {
-            puertaScript.enabled = true;
             puertaAbierta = true;
             Debug.Log("¡Puntos suficientes! Ahora puedes abrir la puerta.");
             return true;
@@ -52,8 +47,10 @@ public class ControlPuntosPuerta : MonoBehaviour
     {
         Debug.Log("Coroutine");
         image.Play("open");
+        puertaabre.Play();
         yield return new WaitForSeconds(3);
         image.Play("close");
+        puertacierra.Play();
     }
 }
 

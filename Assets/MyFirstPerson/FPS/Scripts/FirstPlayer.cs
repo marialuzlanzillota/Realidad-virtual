@@ -13,6 +13,8 @@ public class FirstPlayer : MonoBehaviour
 
     FirstPlayerCamera _myCam;
 
+    public bool playerCanNotMoveNow;
+
     float _mouseX;
 
     float _inputMouseX, _inputMouseY, _inputVertical, _inputHorizontal;
@@ -37,23 +39,29 @@ public class FirstPlayer : MonoBehaviour
 
     void Update()
     {
-        _inputMouseX = Input.GetAxisRaw("Mouse X");
-        _inputMouseY = Input.GetAxisRaw("Mouse Y");
-
-        _inputVertical = Input.GetAxis("Vertical");
-        _inputHorizontal = Input.GetAxis("Horizontal");
-
-        if (_inputMouseX != 0 || _inputMouseY != 0)
+        if(!playerCanNotMoveNow)
         {
-            Rotation(_inputMouseX, _inputMouseY);
+            _inputMouseX = Input.GetAxisRaw("Mouse X");
+            _inputMouseY = Input.GetAxisRaw("Mouse Y");
+
+            _inputVertical = Input.GetAxis("Vertical");
+            _inputHorizontal = Input.GetAxis("Horizontal");
+
+            if (_inputMouseX != 0 || _inputMouseY != 0)
+            {
+                Rotation(_inputMouseX, _inputMouseY);
+            }
         }
     }
 
     private void FixedUpdate()
     {
-        if (_inputVertical != 0 || _inputHorizontal != 0)
+        if (!playerCanNotMoveNow)
         {
-            Movement(_inputHorizontal, _inputVertical);
+            if (_inputVertical != 0 || _inputHorizontal != 0)
+            {
+                Movement(_inputHorizontal, _inputVertical);
+            }
         }
     }
 
