@@ -9,22 +9,24 @@ public class brillo : MonoBehaviour
     public float slidersValue;
     public Image panelBrillo;
     public GameObject optionsPanel;
+
     void Start()
     {
-        slider.value = PlayerPrefs.GetFloat("brillo",0.5f);
-        panelBrillo.color = new Color(panelBrillo.color.r, panelBrillo.color.g, panelBrillo.color.b, slider.value);
+        slider.minValue = 0.1f;
+        slider.maxValue = 1f;
 
+
+        slider.value = PlayerPrefs.GetFloat("brillo", 0.5f);
+
+        panelBrillo.color = new Color(panelBrillo.color.r, panelBrillo.color.g, panelBrillo.color.b, 1 - slider.value);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void ChangeSlider(float valor)
     {
         slidersValue = valor;
         PlayerPrefs.SetFloat("brillo", slidersValue);
-        panelBrillo.color=new Color (panelBrillo.color.r,panelBrillo.color.g,panelBrillo.color.b,slider.value);
-    }   
+
+        // Invertir el valor para cambiar brillo en la dirección correcta
+        panelBrillo.color = new Color(panelBrillo.color.r, panelBrillo.color.g, panelBrillo.color.b, 1 - slider.value);
+    }
 }
