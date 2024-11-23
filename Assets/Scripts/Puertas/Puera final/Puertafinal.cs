@@ -22,6 +22,7 @@ public class ControlPuntosPuerta : MonoBehaviour
             if (puertaAbierta || CheckForDoorOpen())
             {
                 doorAnim2.Play("open1");
+                puertaabre.Play();
             }
             else if (!CheckForDoorOpen())
             {
