@@ -16,8 +16,6 @@ public class esferasadestruir : MonoBehaviour
     {
         
             ObjPuntos.GetComponent<Puntos>().puntos += 1;
-            Debug.Log("La pelota se destruye :)");
-            Debug.Log("Si la pelota se destruye yo me sumo");
             Agarraesferas.Play();
             brillo.Stop();
         Destroy(gameObject);

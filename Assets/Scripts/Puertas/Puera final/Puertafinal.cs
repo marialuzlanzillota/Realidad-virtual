@@ -23,6 +23,7 @@ public class ControlPuntosPuerta : MonoBehaviour
             {
                 doorAnim2.Play("open1");
                 puertaabre.Play();
+                
             }
             else if (!CheckForDoorOpen())
             {
@@ -53,5 +54,8 @@ public class ControlPuntosPuerta : MonoBehaviour
         image.Play("close");
         puertacierra.Play();
     }
+
 }
+
+
 
